@@ -1,5 +1,3 @@
-MAX = 100
-
 
 def smallestInRow(mat, n, m):
     print("{", end="")
@@ -32,16 +30,18 @@ def smallestInCol(mat, n, m):
 
     print("}")
 
-n = 3
-m = 3
-mat = [[2, 1, 7],
-       [3, 7, 2],
-       [5, 4, 9]];
+
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
+for i in range(n):
+    a.append(list(map(int, input().split())))
 
 print("Minimum element of each row is",
       end=" ")
-smallestInRow(mat, n, m)
+smallestInRow(a, n, m)
 
 print("Minimum element of each column is",
-          end=" ")
-smallestInCol(mat, n, m)
+      end=" ")
+smallestInCol(a, n, m)
