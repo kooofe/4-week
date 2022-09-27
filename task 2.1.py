@@ -1,13 +1,12 @@
-n=3
-a=[]
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
 for i in range(n):
-    b=[]
-    for j in range(n):
-        print('Введите [',i,',',j,'] элемент')
-        b.append(int(input()))
-    a.append(b)
-def magsquare(a):
-    n = 3
+    a.append(list(map(int, input().split())))
+
+
+def magSquare(a):
     diag1 = 0
     diag2 = 0
     for i in range(n):
@@ -19,14 +18,15 @@ def magsquare(a):
         rows = 0
         cols = 0
         for j in range(n):
-            rows  += a[i][j]
+            rows += a[i][j]
             cols += a[j][i]
-        if not (rows  == cols == diag1):
+        if not (rows == cols == diag1):
             return False
 
     return True
 
-if (magsquare(a)):
+
+if (magSquare(a)):
     print("Magic Square")
 else:
     print("Not a magic Square")
