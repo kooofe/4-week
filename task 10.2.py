@@ -6,7 +6,6 @@ def sortRowWise(m):
             for k in range(len(m[i]) - j - 1):
 
                 if m[i][k] > m[i][k + 1]:
-                    # swapping of elements
                     t = m[i][k]
                     m[i][k] = m[i][k + 1]
                     m[i][k + 1] = t
@@ -17,5 +16,10 @@ def sortRowWise(m):
         print()
 
 
-m = [[9, 8, 7, 1], [7, 3, 0, 2], [9, 5, 3, 2], [6, 3, 1, 2]]
-sortRowWise(m)
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
+for i in range(n):
+    a.append(list(map(int, input().split())))
+sortRowWise(a)
