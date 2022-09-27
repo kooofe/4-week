@@ -1,4 +1,3 @@
-# task 11.2
 from operator import mul
 from functools import reduce
 
