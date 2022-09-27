@@ -1,4 +1,3 @@
-# task 12.2
 def spec_subtract(matrix):
     for i in range(0, len(matrix) - 1):
         for j in range(0, len(matrix[i])):
