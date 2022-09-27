@@ -1,11 +1,8 @@
-n=4
-a=[]
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
 for i in range(n):
-    b=[]
-    for j in range(n):
-        print('Введите [',i,',',j,'] элемент')
-        b.append(int(input()))
-    a.append(b)
+    a.append(list(map(int, input().split())))
 p = 0
 s = 0
 for i in range(n):
