@@ -1,11 +1,8 @@
-N = 4
 
+def showMatrix(mat,n,m):
 
-def showMatrix(mat):
-    i = None
-    j = None
-    for i in range(N):
-        for j in range(N):
+    for i in range(n):
+        for j in range(m):
             print(mat[i][j], end=" ")
         print('')
 
@@ -13,22 +10,24 @@ def showMatrix(mat):
 def kthSmallest(arr, n, K):
     arr.sort()
 
-    return arr[K - 1]
+    return arr[m - 1]
 
 
-def ReplaceDiagonal(mat, K):
-    i = None
-    j = None
-    arr = [0] * N
+def ReplaceDiagonal(mat, n,m):
+    arr = [0] * n
 
-    for i in range(N):
-        for j in range(N):
+    for i in range(n):
+        for j in range(n):
             arr[j] = mat[i][j]
-        mat[i][i] = kthSmallest(arr, N, K)
-    showMatrix(mat)
+        mat[i][i] = kthSmallest(arr, n, m)
+    showMatrix(mat,n,m)
 
 
-mat = [[1, 2, 3, 4], [4, 2, 7, 6], [3, 5, 1, 9], [2, 4, 6, 8]]
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
+for i in range(n):
+    a.append(list(map(int, input().split())))
 
-K = 3
-ReplaceDiagonal(mat, K)
+ReplaceDiagonal(a, n,m)
