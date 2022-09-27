@@ -29,14 +29,15 @@ def upper(matrix, row, col):
         print(" ")
 
 
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]
-row = 3
-col = 3
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
+for i in range(n):
+    a.append(list(map(int, input().split())))
 
 print("Lower triangular matrix: ")
-lower(matrix, row, col)
+lower(a, n, m)
 
 print("Upper triangular matrix: ")
-upper(matrix, row, col)
+upper(a, n, m)
