@@ -39,9 +39,10 @@ def diagonalsMinMax(mat):
           secondaryMax)
 
 
-matrix = [[1, 2, 3, 4, -10],
-          [5, 6, 7, 8, 6],
-          [1, 2, 11, 3, 4],
-          [5, 6, 70, 5, 8],
-          [4, 9, 7, 1, -5]]
-diagonalsMinMax(matrix)
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
+for i in range(n):
+    a.append(list(map(int, input().split())))
+diagonalsMinMax(a)
