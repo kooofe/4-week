@@ -19,8 +19,10 @@ def determinantOfMatrix(mat):
     return Sum
 
 
-mat = [[1, 0, 2, -1],
-        [3, 0, 0, 5],
-        [2, 1, 4, -3],
-        [1, 0, 5, 0]]
-print('Determinant of the matrix is :', determinantOfMatrix(mat))
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
+for i in range(n):
+    a.append(list(map(int, input().split())))
+print('Determinant of the matrix is :', determinantOfMatrix(a))
