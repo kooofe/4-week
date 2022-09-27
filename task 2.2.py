@@ -1,14 +1,11 @@
-n=int(input('введите кол строк:'))
-m=int(input('введите кол столбцов:'))
-a=[]
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
 for i in range(n):
-    b=[]
-    for j in range(n):
-        print('Введите [',i,',',j,'] элемент')
-        b.append(int(input()))
-    a.append(b)
+    a.append(list(map(int, input().split())))
 
-print('исходный массив')
+print('origin array: ')
 for i in range(m):
     for j in range(n):
         print(a[i][j], end=' ')
