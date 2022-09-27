@@ -1,4 +1,3 @@
-# task 12.1
 n = int(input('Enter the size of the square matrix: '))
 a = []
 print('Enter your array: ')
