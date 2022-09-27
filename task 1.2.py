@@ -1,10 +1,7 @@
-n=3
-a=[]
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
 for i in range(n):
-    b=[]
-    for j in range(n):
-        print('Введите [',i,',',j,'] элемент')
-        b.append(int(input()))
-    a.append(b)
+    a.append(list(map(int, input().split())))
 def min_elts(a):
     return list(map(min,a))
