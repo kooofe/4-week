@@ -11,19 +11,16 @@ def sortArr(arr, m, n):
     print()
 
 
-n = int(input('введите кол строк:'))
-m = int(input('введите кол столбцов:'))
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
 a = []
-for i in range(m):
-    b = []
-    for j in range(n):
-        print('Введите [', i, ',', j, '] элемент')
-        b.append(int(input()))
-    a.append(b)
+print("enter the row by row")
+for i in range(n):
+    a.append(list(map(int, input().split())))
 
-print('исходный массив')
+print('origin array: ')
 printArray(a, m, n)
 
 sortArr(a, m, n)
-print('измененный массив')
+print('changed array:')
 printArray(a, m, n)
