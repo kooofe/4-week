@@ -1,13 +1,11 @@
-def diagonal(A):
-    N = 3
-
-    for col in range(N):
+def diagonal(A, n, m):
+    for col in range(m):
 
         startcol = col
         startrow = 0
 
         while (startcol >= 0 and
-               startrow < N):
+               startrow < m):
             print(A[startrow][startcol], end=" ")
 
             startcol -= 1
@@ -15,11 +13,11 @@ def diagonal(A):
 
         print()
 
-    for row in range(1, N):
+    for row in range(1, n):
         startrow = row
-        startcol = N - 1
+        startcol = n - 1
 
-        while (startrow < N and
+        while (startrow < n and
                startcol >= 0):
             print(A[startrow][startcol],
                   end=" ")
@@ -30,8 +28,11 @@ def diagonal(A):
         print()
 
 
-A = [[1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]]
+n = int(input("enter the n: "))
+m = int(input("enter the m: "))
+a = []
+print("enter the row by row")
+for i in range(n):
+    a.append(list(map(int, input().split())))
 
-diagonal(A)
+diagonal(a, n, m)
